@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>Desk · PAPER</title>
+<link rel="stylesheet" href="assets/app.css"/>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="brand">DESK <span id="modePill" class="pill paper">PAPER</span></div>
+    <div id="stackLine" class="muted">stack —</div>
+  </header>
+  <nav>
+    <button data-tab="home" class="active">Home</button>
+    <button data-tab="agents">Agents</button>
+    <button data-tab="auditor">Auditor</button>
+    <button data-tab="coin">Coin</button>
+    <button data-tab="account">Account</button>
+  </nav>
+  <main>
+    <section id="tab-home" class="tab active">
+      <div id="activity" class="feed"></div>
+      <div id="homeEmpty" class="empty hidden">No activity yet. Waiting for migrations…</div>
+      <div id="homeError" class="error hidden">Couldn't load state.</div>
+    </section>
+    <section id="tab-agents" class="tab">
+      <div class="cards" id="agentCards"></div>
+      <div id="agentsEmpty" class="empty hidden">Agents offline.</div>
+    </section>
+    <section id="tab-auditor" class="tab">
+      <div id="auditDisc" class="disc">
+        <div class="layers" id="auditLayers"></div>
+      </div>
+      <div id="auditorEmpty" class="empty">No audit running.</div>
+    </section>
+    <section id="tab-coin" class="tab">
+      <div id="coinPanel" class="empty">Pick a coin from Activity.</div>
+    </section>
+    <section id="tab-account" class="tab">
+      <div id="accountPanel"></div>
+    </section>
+  </main>
+</div>
+<script src="boot.js"></script>
+<script src="links.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
